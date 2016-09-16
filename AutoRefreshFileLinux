@@ -1,5 +1,5 @@
 $ watch -n1 ./push.sh
-
+//$ watch -n{TIME IN SECs} ./push.sh
 ///////////////////push.sh//////////////////////////
 FILE=File_.txt             
 NAME=${FILE%.*}
