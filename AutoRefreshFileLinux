@@ -1,0 +1,10 @@
+$ watch -n1 ./push.sh
+
+///////////////////push.sh//////////////////////////
+FILE=File_.txt             
+NAME=${FILE%.*}
+EXT=${FILE#*.} 
+DATE=`date +%d-%m-%y-%H-%M-%S`         
+NEWFILE=${NAME}_${DATE}.${EXT}
+echo "File" > $NEWFILE
+///////////////////////////////////////////////////
