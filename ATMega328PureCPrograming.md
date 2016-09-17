@@ -16,7 +16,7 @@
 * (Extra) backup code from atmega328:
   * $ avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:r:flash_backup.hex:i
 
-* Blink Example code:
+* led.c code:
 ```c
 #include <avr/io.h>
 #include <util/delay.h>
