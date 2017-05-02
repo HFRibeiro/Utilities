@@ -19,3 +19,6 @@ which qmake
 
 qmake --version
 Using Qt version 5.3.2 in /opt/Qt5/5.3/gcc/lib
+
+#Add serial port permission
+sudo usermod -a -G dialout code
