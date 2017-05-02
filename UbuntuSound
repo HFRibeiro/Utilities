@@ -1,0 +1,13 @@
+alsamixer -> Disable loopback
+
+sudo vim /usr/lib/pm-utils/power.d/intel-audio-powersave
+
+change the line
+
+INTEL_AUDIO_POWERSAVE=${INTEL_AUDIO_POWERSAVE:-true}
+
+to
+
+INTEL_AUDIO_POWERSAVE=false
+
+Reboot.
