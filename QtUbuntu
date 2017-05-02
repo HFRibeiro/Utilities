@@ -9,13 +9,13 @@ sudo -s chmod -R 777 /opt/Qt
 
 sudo -s vim /etc/profile
 
-PATH=/opt/Qt/5.6/gcc_64/bin:$PATH
+PATH=/opt/Qt/5.8/gcc_64/bin:$PATH
 export PATH
 
 cd ~
 . .profile
 which qmake
-/opt/Qt/5.3/gcc/bin/qmake
+/opt/Qt/5.8/gcc_64/bin/qmake
 
 qmake --version
 Using Qt version 5.3.2 in /opt/Qt5/5.3/gcc/lib
