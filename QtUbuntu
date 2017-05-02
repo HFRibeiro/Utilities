@@ -1,0 +1,21 @@
+sudo apt-get install build-essential 
+sudo apt-get install mesa-common-dev 
+sudo apt-get install libgl1-mesa-dev
+sudo apt-get install "^libxcb.*" libx11-xcb-dev libglu1-mesa-dev libxrender-dev
+
+sudo -s chmod u+x qt-linux-opensource-5.3.2-x86_64-offline.run
+
+sudo -s chmod -R 777 /opt/Qt
+
+sudo -s vim /etc/profile
+
+PATH=/opt/Qt/5.6/gcc_64/bin:$PATH
+export PATH
+
+cd ~
+. .profile
+which qmake
+/opt/Qt/5.3/gcc/bin/qmake
+
+qmake --version
+Using Qt version 5.3.2 in /opt/Qt5/5.3/gcc/lib
