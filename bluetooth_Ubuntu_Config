@@ -1,0 +1,11 @@
+bluetoothctl
+power off
+power on
+scan on
+F0:DB:6C:03:06:BD
+trust
+connect F0:DB:6C:03:06:BD
+pair
+unblock
+power off
+power on
