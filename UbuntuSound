@@ -11,3 +11,6 @@ to
 INTEL_AUDIO_POWERSAVE=false
 
 Reboot.
+
+add in /etc/modprobe.d/alsa-base.conf
+options snd-hda-intel model=dell-headset-multi
