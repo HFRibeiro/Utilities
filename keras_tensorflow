@@ -1,0 +1,11 @@
+mkvirtualenv keras_tf -p python3
+workon keras_tf
+pip install --upgrade tensorflow
+pip install numpy scipy
+pip install scikit-learn
+pip install pillow
+pip install h5py
+pip install keras
+pip install --upgrade imutils
+pip install --upgrade scikit-learn
+pip install --upgrade matplotlib
