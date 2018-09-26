@@ -1,0 +1,9 @@
+pip install --upgrade tensorflow-gpu
+pip install numpy scipy
+pip install scikit-learn
+pip install pillow
+pip install h5py
+pip install keras
+pip install --upgrade imutils
+pip install --upgrade scikit-learn
+pip install --upgrade matplotlib
