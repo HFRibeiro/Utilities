@@ -1,0 +1,5 @@
+sudo apt-get install libusb-1.0-0
+pip install --upgrade --user brother_ql
+export BROTHER_QL_PRINTER=/dev/usb/lp1
+export BROTHER_QL_MODEL=QL-700
+brother_ql print -l 29 FX.png
