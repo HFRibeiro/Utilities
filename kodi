@@ -1,0 +1,7 @@
+sudo add-apt-repository ppa:team-xbmc/xbmc-nightly
+sudo apt-get update
+sudo apt-get install kodi
+sudo apt-get install kodi-pvr-iptvsimple
+sudo apt-get install python-pip
+pip install --user pycryptodomex
+wget https://github.com/kodinerds/repo/raw/master/repository.netflix/repository.netflix-1.0.1.zip
