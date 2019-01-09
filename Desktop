@@ -1,1 +1,10 @@
+##Ubuntu
+
 gsettings set org.gnome.desktop.background picture-uri file:///home/code/Pictures/back2.png
+
+
+##Windows
+
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d E:\photos\image1.bmp /f
+RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+
