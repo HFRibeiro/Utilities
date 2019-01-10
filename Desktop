@@ -5,6 +5,8 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/code/Picture
 
 ##Windows
 
-reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d E:\photos\image1.bmp /f
+@echo off
+powershell -Command "Invoke-WebRequest http://www.roboparty.org/result_image.png -OutFile C:\Users\code\Pictures\result.png"
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d C:\Users\code\Pictures\result.png /f
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 
