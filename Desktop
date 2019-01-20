@@ -1,6 +1,7 @@
 ##Ubuntu
 
-gsettings set org.gnome.desktop.background picture-uri file:///home/code/Pictures/back2.png
+wget http://www.roboparty.org/result_image.png -O /home/code/Pictures/result_images.png
+gsettings set org.gnome.desktop.background picture-uri /home/code/Pictures/result_images.png
 
 
 ##Windows
