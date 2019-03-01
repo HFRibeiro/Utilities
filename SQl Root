@@ -1,0 +1,4 @@
+mysql --user=root mysql
+CREATE USER 'phpmyadmin'@'localhost' IDENTIFIED BY 'some_pass';
+GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
