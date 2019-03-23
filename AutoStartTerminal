@@ -1,0 +1,3 @@
+gnome-terminal -e 'sh -c "cd web-maxiv-tangogql/; python3 -m tangogql"'
+gnome-terminal -e 'sh -c "cd ska-engineering-ui-compose-utils/dummy_authserver/web/; python3 dummy_authenticator.py"'
+gnome-terminal -e 'sh -c "/usr/lib/tango/TangoTest test"'
