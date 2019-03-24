@@ -15,7 +15,7 @@ git checkout 3.4
 cd opencv
 mkdir build
 cd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_CUDA=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON WITH_GSTREAMER=ON WITH_FFMPEG=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules -D BUILD_opencv_cudacodec=OFF ..
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_CUDA=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON WITH_GSTREAMER=ON WITH_FFMPEG=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules -D BUILD_opencv_cudacodec=OFF -DOPENCV_ENABLE_NONFREE:BOOL=ON ..
 make -j $(nproc)
 sudo make install
 sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
