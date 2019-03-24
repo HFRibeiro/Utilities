@@ -15,7 +15,24 @@ git checkout 3.4
 cd opencv
 mkdir build
 cd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_CUDA=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON WITH_GSTREAMER=ON WITH_FFMPEG=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules -D BUILD_opencv_cudacodec=OFF -DOPENCV_ENABLE_NONFREE:BOOL=ON ..
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \
+-D PYTHON3_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \
+-D PYTHON3_INSTALL=/usr/local/lib/python3.6/site-packages/cv2/python-3.6 \
+-D PYTHON3_EXECUTABLE=/usr/bin/python3.6 \
+-D BUILD_opencv_python3=ON \
+-D PYTHON_DEFAULT_EXECUTABLE=$(which python3) \
+-D WITH_TBB=ON \
+-D WITH_CUDA=ON \
+-D WITH_V4L=ON \
+-D WITH_QT=ON \
+-D WITH_OPENGL=ON WITH_GSTREAMER=ON WITH_FFMPEG=ON \
+-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+-D BUILD_opencv_cudacodec=OFF \
+-D OPENCV_ENABLE_NONFREE:BOOL=ON \
+-D ENABLE_PRECOMPILED_HEADERS=OFF \
+-D INSTALL_PYTHON_EXAMPLES=ON ..
 make -j $(nproc)
 sudo make install
 sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
