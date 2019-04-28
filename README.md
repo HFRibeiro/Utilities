@@ -14,3 +14,8 @@ g++ `pkg-config --cflags opencv` houghlines.cpp `pkg-config --libs opencv` -o ho
 ```
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+#### Docker comands
+
+```
+docker exec -it webjive sh
+```
