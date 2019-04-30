@@ -19,3 +19,12 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 ```
 docker exec -it webjive sh
 ```
+
+#### To delete all containers including its volumes use,
+```
+docker rm -vf $(docker ps -a -q)
+```
+#### To delete all the images,
+```
+docker rmi -f $(docker images -a -q)
+```
