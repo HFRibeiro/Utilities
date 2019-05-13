@@ -28,3 +28,8 @@ docker rm -vf $(docker ps -a -q)
 ```
 docker rmi -f $(docker images -a -q)
 ```
+
+#### echo on make
+```
+$(error   VAR is $(VAR))
+```
