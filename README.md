@@ -33,3 +33,8 @@ docker rmi -f $(docker images -a -q)
 ```
 $(error   VAR is $(VAR))
 ```
+
+#### current branch
+```
+git branch | grep \* | cut -d ' ' -f2
+```
