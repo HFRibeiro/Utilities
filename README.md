@@ -39,3 +39,20 @@ $(error   VAR is $(VAR))
 ```
 git branch | grep \* | cut -d ' ' -f2
 ```
+
+
+######
+```
+kubectl logs -n integration oet-ssh
+```
+
+``` 
+kubectl exec -it oet-ssh -n integration -- /bin/bash
+```
+
+To run OET need to pass from root to tango user
+$su tango
+
+```
+docker run -it oet-ssh /bin/bash
+```
