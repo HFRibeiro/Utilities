@@ -56,3 +56,7 @@ $su tango
 ```
 docker run -it oet-ssh /bin/bash
 ```
+
+```
+ssh tango@10.104.116.225 -p 2022 -t 'bash -ic "bash"'
+```
