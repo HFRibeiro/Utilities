@@ -60,3 +60,9 @@ docker run -it oet-ssh /bin/bash
 ```
 ssh tango@10.104.116.225 -p 2022 -t 'bash -ic "bash"'
 ```
+
+### build docs
+
+```
+docker run --rm -d -v $(pwd):/tmp -w /tmp/docs netresearch/sphinx-buildbox sh -c "make html"
+```
