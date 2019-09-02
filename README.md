@@ -32,7 +32,10 @@ docker rmi -f $(docker images -a -q)
 
 #### echo on make
 ```
-$(error   VAR is $(VAR))
+$(info   DOCKER_COMPOSE_ARGS are $(DOCKER_COMPOSE_ARGS))
+
+DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority TANGO_HOST=databaseds:10000 NETWORK_MODE=tangonet XAUTHORITY_MOUNT=/tmp/.X11-unix:/tmp/.X11-unix MYSQL_HOST=tangodb:3306 CONTAINER_NAME_PREFIX= COMPOSE_IGNORE_ORPHANS=true TMC_VERSION=latest
+
 ```
 
 #### current branch
