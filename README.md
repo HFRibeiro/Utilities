@@ -74,3 +74,8 @@ docker run --rm -d -v $(pwd):/tmp -w /tmp/docs netresearch/sphinx-buildbox sh -c
 ```
 DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority TANGO_HOST=databaseds:10000 NETWORK_MODE=tangonet XAUTHORITY_MOUNT=/tmp/.X11-unix:/tmp/.X11-unix MYSQL_HOST=tangodb:3306 CONTAINER_NAME_PREFIX= COMPOSE_IGNORE_ORPHANS=true TMC_VERSION=latest docker-compose -f tango-example.yml up -d
 ```
+
+### npm install
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+```
