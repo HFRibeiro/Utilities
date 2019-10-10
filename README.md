@@ -96,4 +96,11 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 ```
+#### gopro2json
 
+- Install Go (https://golang.org/doc/install)
+- Create a directory $HOME/go/src/github.com/stilldavid/
+- Clone the repo into the dir created in #2
+- export GOPATH=$HOME/go
+- go get github.com/stilldavid/gopro-utils/bin/gopro2json
+go install github.com/stilldavid/gopro-utils/bin/gopro2json
