@@ -1,1 +1,7 @@
 docker login -u ci-cd -p ci-cd-pipeline-8237 nexus.engageska-portugal.pt
+
+docker tag oet-ssh:latest nexus.engageska-portugal.pt/ska-telescope/oet-ssh:latest
+
+docker push nexus.engageska-portugal.pt/ska-telescope/oet-ssh:latest
+
+docker run -d -P --name=oet-dev -e TANGO_HOST=oet-databaseds:10000 --network=tangonet -v /home/button/PycharmProjects/observation-execution-tool:/app oet-ssh /bin/bash
