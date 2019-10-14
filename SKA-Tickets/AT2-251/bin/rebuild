@@ -1,0 +1,6 @@
+#!/bin/bash 
+cd ~/web-maxiv-tangogql && docker-compose build && docker-compose up -d
+cd ~/ska-engineering-ui-compose-utils && make ds-config
+cd ~/ska-engineering-ui-compose-utils && make mvp
+cd ~/ska-engineering-ui-compose-utils && make debug
+
