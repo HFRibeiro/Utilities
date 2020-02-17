@@ -110,3 +110,10 @@ export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 - export GOPATH=$HOME/go
 - go get github.com/stilldavid/gopro-utils/bin/gopro2json
 go install github.com/stilldavid/gopro-utils/bin/gopro2json
+
+
+#### Expand Virtual Box Disk 100GB
+```
+cd "C:\Program Files\Oracle\VirtualBox"
+VBoxManage modifyhd "C:\Users\code\VirtualBox VMs\k8s_t\k8s-disk001.vdi" --resize 102400
+```
