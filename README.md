@@ -117,3 +117,8 @@ go install github.com/stilldavid/gopro-utils/bin/gopro2json
 cd "C:\Program Files\Oracle\VirtualBox"
 VBoxManage modifyhd "C:\Users\code\VirtualBox VMs\k8s_t\k8s-disk001.vdi" --resize 102400
 ```
+
+### K8s system output
+```
+kubectl get svc -n kube-system
+```
