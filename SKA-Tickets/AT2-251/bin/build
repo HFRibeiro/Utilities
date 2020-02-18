@@ -1,0 +1,4 @@
+#!/bin/bash 
+cd ~/web-maxiv-tangogql && sed -i 's/"secret":""/"secret":"s3cr3t"/g' config.json
+cd ~/web-maxiv-tangogql && docker-compose build
+cd ~/web-maxiv-tangogql && sed -i 's/"secret":"s3cr3t"/"secret":""/g' config.json
