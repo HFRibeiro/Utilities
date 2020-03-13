@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" ?><testsuites><testsuite errors="0" failures="299" name="pylint" tests="19" time="0.0"><properties><property name="converted_by" value="pylint2junit" /></properties><testcase name="tangogql.aioserver" time="0.0"><failure message="tangogql/aioserver.py:78" type="C0330: bad-continuation">Wrong hanging indentation (remove 36 spaces).
+                                            allow_credentials=True,
+        |                                   ^
+</failure><failure message="tangogql/aioserver.py:79" type="C0330: bad-continuation">Wrong hanging indentation (remove 36 spaces).
+                                            expose_headers="*",
+        |                                   ^
+</failure><failure message="tangogql/aioserver.py:80" type="C0330: bad-continuation">Wrong hanging indentation (remove 36 spaces).
+                                            allow_headers="*")
+        |                                   ^
+</failure><failure message="tangogql/aioserver.py:46" type="C0415: import-outside-toplevel">Import outside toplevel (PyTango, time)
+</failure><failure message="tangogql/aioserver.py:46" type="C0410: multiple-imports">Multiple imports on one line (PyTango, time)
+</failure><failure message="tangogql/aioserver.py:52" type="E1101: no-member">Module 'PyTango' has no 'Database' member
+</failure><failure message="tangogql/aioserver.py:53" type="E1101: no-member">Module 'PyTango' has no 'ConnectionFailed' member
+</failure><failure message="tangogql/aioserver.py:66" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/aioserver.py:69" type="C0415: import-outside-toplevel">Import outside toplevel (tangogql.routes)
+</failure><failure message="tangogql/aioserver.py:70" type="C0415: import-outside-toplevel">Import outside toplevel (tangogql.config)
+</failure><failure message="tangogql/aioserver.py:85" type="C0103: invalid-name">Variable name "r" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/aioserver.py:105" type="C0103: invalid-name">Variable name "f" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/aioserver.py:113" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/aioserver.py:121" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/aioserver.py:125" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/aioserver.py:137" type="C0103: invalid-name">Variable name "f" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/aioserver.py:19" type="W0611: unused-import">Unused import uuid
+</failure><failure message="tangogql/aioserver.py:21" type="W0611: unused-import">Unused import json
+</failure><failure message="tangogql/aioserver.py:18" type="C0411: wrong-import-order">standard import "import asyncio" should be placed before "import aiohttp"
+</failure><failure message="tangogql/aioserver.py:19" type="C0411: wrong-import-order">standard import "import uuid" should be placed before "import aiohttp"
+</failure><failure message="tangogql/aioserver.py:20" type="C0411: wrong-import-order">standard import "import os" should be placed before "import aiohttp"
+</failure><failure message="tangogql/aioserver.py:21" type="C0411: wrong-import-order">standard import "import json" should be placed before "import aiohttp"
+</failure><failure message="tangogql/aioserver.py:22" type="C0411: wrong-import-order">standard import "import sys" should be placed before "import aiohttp"
+</failure></testcase><testcase name="tangogql.auth" time="0.0"><failure message="tangogql/auth.py:1" type="C0114: missing-module-docstring">Missing module docstring
+</failure><failure message="tangogql/auth.py:5" type="C0103: invalid-name">Constant name "logger" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/auth.py:8" type="C0103: invalid-name">Argument name "f" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/auth.py:8" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/auth.py:21" type="C0103: invalid-name">Argument name "f" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/auth.py:21" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/auth.py:30" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/auth.py:34" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/auth.py:38" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/auth.py:1" type="W0611: unused-import">Unused import os
+</failure><failure message="tangogql/auth.py:3" type="C0411: wrong-import-order">standard import "import logging" should be placed before "from graphql import GraphQLError"
+</failure></testcase><testcase name="tangogql.routes" time="0.0"><failure message="tangogql/routes.py:63" type="C0326: bad-whitespace">Exactly one space required after comma
+            if hasattr(e,"original_error"):
+                        ^
+</failure><failure message="tangogql/routes.py:65" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/routes.py:66" type="C0325: superfluous-parens">Unnecessary parens after 'in' keyword
+</failure><failure message="tangogql/routes.py:23" type="W0511: fixme">FIXME: aiohttp doesn't support automatic serving of index files when serving
+</failure><failure message="tangogql/routes.py:1" type="C0114: missing-module-docstring">Missing module docstring
+</failure><failure message="tangogql/routes.py:20" type="C0103: invalid-name">Constant name "subscription_server" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/routes.py:21" type="C0103: invalid-name">Constant name "routes" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/routes.py:27" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/routes.py:27" type="W0613: unused-argument">Unused argument 'request'
+</failure><failure message="tangogql/routes.py:32" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/routes.py:32" type="W0613: unused-argument">Unused argument 'request'
+</failure><failure message="tangogql/routes.py:62" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/routes.py:81" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/routes.py:82" type="C0103: invalid-name">Variable name "ws" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/routes.py:7" type="W0611: unused-import">Unused import os
+</failure><failure message="tangogql/routes.py:11" type="W0611: unused-import">Unused format_error imported from graphql
+</failure><failure message="tangogql/routes.py:6" type="C0411: wrong-import-order">standard import "import json" should be placed before "from aiohttp import web"
+</failure><failure message="tangogql/routes.py:7" type="C0411: wrong-import-order">standard import "import os" should be placed before "from aiohttp import web"
+</failure><failure message="tangogql/routes.py:8" type="C0411: wrong-import-order">standard import "import logging as logger" should be placed before "from aiohttp import web"
+</failure></testcase><testcase name="tangogql.tangodb" time="0.0"><failure message="tangogql/tangodb.py:14" type="R0205: useless-object-inheritance">Class 'CachedMethod' inherits from object, can be safely removed from bases in python3
+</failure><failure message="tangogql/tangodb.py:14" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/tangodb.py:29" type="R0205: useless-object-inheritance">Class 'CachedDatabase' inherits from object, can be safely removed from bases in python3
+</failure><failure message="tangogql/tangodb.py:29" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/tangodb.py:49" type="R0205: useless-object-inheritance">Class 'DeviceProxyCache' inherits from object, can be safely removed from bases in python3
+</failure><failure message="tangogql/tangodb.py:58" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/tangodb.py:49" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure></testcase><testcase name="tangogql.ttldict" time="0.0"><failure message="tangogql/ttldict.py:14" type="E0611: no-name-in-module">No name 'MutableMapping' in module 'collections'
+</failure><failure message="tangogql/ttldict.py:32" type="W0101: unreachable">Unreachable code
+</failure><failure message="tangogql/ttldict.py:73" type="C0201: consider-iterating-dictionary">Consider iterating the dictionary directly instead of calling .keys()
+</failure><failure message="tangogql/ttldict.py:79" type="C0201: consider-iterating-dictionary">Consider iterating the dictionary directly instead of calling .keys()
+</failure></testcase><testcase name="tangogql.aioattribute.attribute" time="0.0"><failure message="tangogql/aioattribute/attribute.py:84" type="C0301: line-too-long">Line too long (118/100)
+</failure><failure message="tangogql/aioattribute/attribute.py:85" type="C0301: line-too-long">Line too long (112/100)
+</failure><failure message="tangogql/aioattribute/attribute.py:155" type="C0305: trailing-newlines">Trailing newlines
+</failure></testcase><testcase name="tangogql.aioattribute.manager" time="0.0"><failure message="tangogql/aioattribute/manager.py:83" type="C0305: trailing-newlines">Trailing newlines
+</failure><failure message="tangogql/aioattribute/manager.py:16" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/aioattribute/manager.py:5" type="C0411: wrong-import-order">standard import "import logging as logger" should be placed before "from .attribute import Attribute"
+</failure></testcase><testcase name="tangogql.schema.attribute" time="0.0"><failure message="tangogql/schema/attribute.py:60" type="C0326: bad-whitespace">Exactly one space required after comma
+            PyTango.Except.re_throw_exception(error,"","","")
+                                                   ^
+</failure><failure message="tangogql/schema/attribute.py:60" type="C0326: bad-whitespace">Exactly one space required after comma
+            PyTango.Except.re_throw_exception(error,"","","")
+                                                      ^
+</failure><failure message="tangogql/schema/attribute.py:60" type="C0326: bad-whitespace">Exactly one space required after comma
+            PyTango.Except.re_throw_exception(error,"","","")
+                                                         ^
+</failure><failure message="tangogql/schema/attribute.py:33" type="R1705: no-else-return">Unnecessary "else" after "return"
+</failure><failure message="tangogql/schema/attribute.py:61" type="W0703: broad-except">Catching too general exception Exception
+</failure><failure message="tangogql/schema/attribute.py:48" type="E1101: no-member">Module 'PyTango' has no 'ExtractAs' member
+</failure><failure message="tangogql/schema/attribute.py:54" type="E1101: no-member">Module 'PyTango' has no 'DevFailed' member
+</failure><failure message="tangogql/schema/attribute.py:60" type="E1101: no-member">Module 'PyTango' has no 'Except' member
+</failure><failure message="tangogql/schema/attribute.py:61" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/attribute.py:94" type="W0613: unused-argument">Unused argument 'args'
+</failure><failure message="tangogql/schema/attribute.py:94" type="W0613: unused-argument">Unused argument 'kwargs'
+</failure><failure message="tangogql/schema/attribute.py:105" type="W0613: unused-argument">Unused argument 'args'
+</failure><failure message="tangogql/schema/attribute.py:105" type="W0613: unused-argument">Unused argument 'kwargs'
+</failure><failure message="tangogql/schema/attribute.py:116" type="W0613: unused-argument">Unused argument 'args'
+</failure><failure message="tangogql/schema/attribute.py:116" type="W0613: unused-argument">Unused argument 'kwargs'
+</failure><failure message="tangogql/schema/attribute.py:126" type="W0613: unused-argument">Unused argument 'args'
+</failure><failure message="tangogql/schema/attribute.py:126" type="W0613: unused-argument">Unused argument 'kwargs'
+</failure><failure message="tangogql/schema/attribute.py:138" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:138" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:141" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:141" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:144" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:144" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:147" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:147" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:153" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:153" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:156" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:156" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:159" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:159" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:162" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:162" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:165" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:165" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:168" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:168" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:171" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:171" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:174" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/attribute.py:174" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/attribute.py:180" type="E1101: no-member">Module 'PyTango' has no 'ExtractAs' member
+</failure><failure message="tangogql/schema/attribute.py:189" type="E1101: no-member">Module 'PyTango' has no 'CmdArgType' member
+</failure><failure message="tangogql/schema/attribute.py:195" type="R1705: no-else-return">Unnecessary "else" after "return"
+</failure><failure message="tangogql/schema/attribute.py:5" type="C0411: wrong-import-order">standard import "import asyncio" should be placed before "import PyTango"
+</failure><failure message="tangogql/schema/attribute.py:10" type="C0411: wrong-import-order">standard import "import logging as logger" should be placed before "import PyTango"
+</failure></testcase><testcase name="tangogql.schema.base" time="0.0"><failure message="tangogql/schema/base.py:15" type="C0330: bad-continuation">Wrong continued indentation (add 13 spaces).
+    default_level=logging.DEBUG,
+    ^            |
+</failure><failure message="tangogql/schema/base.py:16" type="C0330: bad-continuation">Wrong continued indentation (add 13 spaces).
+    env_key='LOG_CFG'):
+    ^            |
+</failure><failure message="tangogql/schema/base.py:34" type="C0326: bad-whitespace">No space allowed after bracket
+subscriptions = SubscriptionManager( use_evt=toggle_flags.get_flag("publish_subscribe"),
+                                   ^
+</failure><failure message="tangogql/schema/base.py:36" type="C0305: trailing-newlines">Trailing newlines
+</failure><failure message="tangogql/schema/base.py:10" type="C0103: invalid-name">Constant name "db" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/schema/base.py:11" type="C0103: invalid-name">Constant name "proxies" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/schema/base.py:12" type="C0103: invalid-name">Constant name "toggle_flags" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/schema/base.py:25" type="C0103: invalid-name">Variable name "f" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/base.py:33" type="C0103: invalid-name">Constant name "logger" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/schema/base.py:34" type="C0103: invalid-name">Constant name "subscriptions" doesn't conform to UPPER_CASE naming style
+</failure></testcase><testcase name="tangogql.schema.device" time="0.0"><failure message="tangogql/schema/device.py:117" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/device.py:117" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/device.py:129" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/device.py:131" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/device.py:158" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    tag=cmd_info.cmd_tag,
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:159" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    displevel=cmd_info.disp_level,
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:160" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    intype=cmd_info.in_type,
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:161" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    intypedesc=cmd_info.in_type_desc,
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:162" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    outtype=cmd_info.out_type,
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:163" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    outtypedesc=cmd_info.out_type_desc,
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:164" type="C0330: bad-continuation">Wrong continued indentation (add 1 space).
+                                    device=proxy.name()
+                                    ^|
+</failure><failure message="tangogql/schema/device.py:183" type="C0330: bad-continuation">Wrong continued indentation (add 2 spaces).
+                            host=dev_info.server_host)
+                            ^ |
+</failure><failure message="tangogql/schema/device.py:184" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/device.py:230" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/device.py:31" type="R1721: unnecessary-comprehension">Unnecessary use of a comprehension
+</failure><failure message="tangogql/schema/device.py:19" type="R1710: inconsistent-return-statements">Either all return statements in a function should return an expression, or none of them should.
+</failure><failure message="tangogql/schema/device.py:19" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:34" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/schema/device.py:47" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/schema/device.py:84" type="W0703: broad-except">Catching too general exception Exception
+</failure><failure message="tangogql/schema/device.py:81" type="E1101: no-member">Module 'PyTango' has no 'DevFailed' member
+</failure><failure message="tangogql/schema/device.py:81" type="E1101: no-member">Module 'PyTango' has no 'ConnectionFailed' member
+</failure><failure message="tangogql/schema/device.py:82" type="E1101: no-member">Module 'PyTango' has no 'CommunicationFailed' member
+</failure><failure message="tangogql/schema/device.py:82" type="E1101: no-member">Module 'PyTango' has no 'DeviceUnlocked' member
+</failure><failure message="tangogql/schema/device.py:84" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/device.py:72" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:87" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/device.py:91" type="E1101: no-member">Module 'PyTango' has no 'DevFailed' member
+</failure><failure message="tangogql/schema/device.py:87" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:94" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:108" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:151" type="R1705: no-else-return">Unnecessary "else" after "return"
+</failure><failure message="tangogql/schema/device.py:141" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:173" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:185" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:193" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/device.py:193" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:196" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/device.py:196" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:199" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/device.py:199" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:202" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/device.py:202" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:205" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/device.py:205" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/device.py:219" type="E1101: no-member">Module 'PyTango' has no 'DevFailed' member
+</failure><failure message="tangogql/schema/device.py:219" type="E1101: no-member">Module 'PyTango' has no 'ConnectionFailed' member
+</failure><failure message="tangogql/schema/device.py:210" type="W0201: attribute-defined-outside-init">Attribute '_proxy' defined outside __init__
+</failure><failure message="tangogql/schema/device.py:218" type="W0201: attribute-defined-outside-init">Attribute '_connected' defined outside __init__
+</failure><failure message="tangogql/schema/device.py:220" type="W0201: attribute-defined-outside-init">Attribute '_connected' defined outside __init__
+</failure><failure message="tangogql/schema/device.py:227" type="W0201: attribute-defined-outside-init">Attribute '_info' defined outside __init__
+</failure><failure message="tangogql/schema/device.py:6" type="C0411: wrong-import-order">standard import "import logging as logger" should be placed before "import PyTango"
+</failure><failure message="tangogql/schema/device.py:7" type="C0411: wrong-import-order">standard import "from operator import attrgetter" should be placed before "import PyTango"
+</failure></testcase><testcase name="tangogql.schema.errors" time="0.0"><failure message="tangogql/schema/errors.py:11" type="C0326: bad-whitespace">Exactly one space required after comma
+                if isinstance(message,dict):
+                                     ^
+</failure><failure message="tangogql/schema/errors.py:23" type="C0301: line-too-long">Line too long (121/100)
+</failure><failure message="tangogql/schema/errors.py:23" type="C0326: bad-whitespace">Exactly one space required after comma
+            if isinstance(error.original_error,(PyTango.ConnectionFailed,PyTango.CommunicationFailed,PyTango.DevFailed)):
+                                              ^
+</failure><failure message="tangogql/schema/errors.py:23" type="C0326: bad-whitespace">Exactly one space required after comma
+            if isinstance(error.original_error,(PyTango.ConnectionFailed,PyTango.CommunicationFailed,PyTango.DevFailed)):
+                                                                        ^
+</failure><failure message="tangogql/schema/errors.py:23" type="C0326: bad-whitespace">Exactly one space required after comma
+            if isinstance(error.original_error,(PyTango.ConnectionFailed,PyTango.CommunicationFailed,PyTango.DevFailed)):
+                                                                                                    ^
+</failure><failure message="tangogql/schema/errors.py:26" type="C0326: bad-whitespace">Exactly one space required after comparison
+                    if e.reason =="":
+                                ^^
+</failure><failure message="tangogql/schema/errors.py:34" type="C0326: bad-whitespace">No space allowed before bracket
+                        message["desc" ] = e.desc.split("\n")[0]
+                                       ^
+</failure><failure message="tangogql/schema/errors.py:37" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/errors.py:37" type="C0326: bad-whitespace">Exactly one space required after comma
+                        [device,attribute] =  e.desc.split(",")      
+                               ^
+</failure><failure message="tangogql/schema/errors.py:37" type="C0326: bad-whitespace">Exactly one space required after assignment
+                        [device,attribute] =  e.desc.split(",")      
+                                           ^
+</failure><failure message="tangogql/schema/errors.py:51" type="C0305: trailing-newlines">Trailing newlines
+</failure><failure message="tangogql/schema/errors.py:5" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/schema/errors.py:6" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/errors.py:6" type="E0213: no-self-argument">Method should have "self" as first argument
+</failure><failure message="tangogql/schema/errors.py:9" type="E1133: not-an-iterable">Non-iterable value errors is used in an iterating context
+</failure><failure message="tangogql/schema/errors.py:12" type="C0103: invalid-name">Variable name "t" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/errors.py:14" type="C0103: invalid-name">Variable name "t" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/errors.py:14" type="E0602: undefined-variable">Undefined variable 'e'
+</failure><failure message="tangogql/schema/errors.py:20" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/errors.py:20" type="E0213: no-self-argument">Method should have "self" as first argument
+</failure><failure message="tangogql/schema/errors.py:23" type="E1101: no-member">Instance of 'ErrorParser' has no 'original_error' member
+</failure><failure message="tangogql/schema/errors.py:23" type="E1101: no-member">Module 'PyTango' has no 'ConnectionFailed' member
+</failure><failure message="tangogql/schema/errors.py:23" type="E1101: no-member">Module 'PyTango' has no 'CommunicationFailed' member
+</failure><failure message="tangogql/schema/errors.py:23" type="E1101: no-member">Module 'PyTango' has no 'DevFailed' member
+</failure><failure message="tangogql/schema/errors.py:24" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/errors.py:24" type="E1101: no-member">Instance of 'ErrorParser' has no 'original_error' member
+</failure><failure message="tangogql/schema/errors.py:3" type="W0611: unused-import">Unused format_error imported from graphql
+</failure></testcase><testcase name="tangogql.schema.mutations" time="0.0"><failure message="tangogql/schema/mutations.py:137" type="C0301: line-too-long">Line too long (119/100)
+</failure><failure message="tangogql/schema/mutations.py:137" type="C0326: bad-whitespace">Exactly one space required after comma
+            return SetAttributeValue(ok=True, message=["Success"],value_before=before.value, attribute=DeviceAttribute(
+                                                                 ^
+</failure><failure message="tangogql/schema/mutations.py:6" type="W0611: unused-import">Unused datetime imported from datetime
+</failure></testcase><testcase name="tangogql.schema.query" time="0.0"><failure message="tangogql/schema/query.py:25" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/query.py:169" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/query.py:186" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/query.py:317" type="C0304: missing-final-newline">Final newline missing
+</failure><failure message="tangogql/schema/query.py:30" type="W0201: attribute-defined-outside-init">Attribute '_info' defined outside __init__
+</failure><failure message="tangogql/schema/query.py:41" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:64" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:80" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/schema/query.py:80" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/schema/query.py:95" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:119" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:154" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/query.py:172" type="R1705: no-else-return">Unnecessary "else" after "return"
+</failure><failure message="tangogql/schema/query.py:161" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:178" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:192" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/query.py:192" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:215" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/query.py:215" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:243" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:243" type="R0201: no-self-use">Method could be a function
+</failure><failure message="tangogql/schema/query.py:259" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:259" type="R0201: no-self-use">Method could be a function
+</failure><failure message="tangogql/schema/query.py:278" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:278" type="R0201: no-self-use">Method could be a function
+</failure><failure message="tangogql/schema/query.py:301" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/query.py:301" type="R0201: no-self-use">Method could be a function
+</failure><failure message="tangogql/schema/query.py:6" type="W0611: unused-import">Unused Int imported from graphene
+</failure></testcase><testcase name="tangogql.schema.subscription" time="0.0"><failure message="tangogql/schema/subscription.py:13" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/schema/subscription.py:22" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/subscription.py:22" type="W0613: unused-argument">Unused argument 'info'
+</failure><failure message="tangogql/schema/subscription.py:57" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/subscription.py:5" type="W0611: unused-import">Unused toggle_flags imported from tangogql.schema.base
+</failure><failure message="tangogql/schema/subscription.py:6" type="W0611: unused-import">Unused proxies imported from tangogql.schema.base
+</failure><failure message="tangogql/schema/subscription.py:7" type="W0611: unused-import">Unused import PyTango
+</failure><failure message="tangogql/schema/subscription.py:10" type="W0611: unused-import">Unused import asyncio
+</failure><failure message="tangogql/schema/subscription.py:7" type="C0411: wrong-import-order">third party import "import PyTango" should be placed before "from tangogql.schema.types import ScalarTypes"
+</failure><failure message="tangogql/schema/subscription.py:8" type="C0411: wrong-import-order">standard import "import traceback" should be placed before "from graphene import ObjectType, String, Float, Field, List"
+</failure><failure message="tangogql/schema/subscription.py:9" type="C0411: wrong-import-order">standard import "import logging as logger" should be placed before "from graphene import ObjectType, String, Float, Field, List"
+</failure><failure message="tangogql/schema/subscription.py:10" type="C0411: wrong-import-order">standard import "import asyncio" should be placed before "from graphene import ObjectType, String, Float, Field, List"
+</failure></testcase><testcase name="tangogql.schema.tango" time="0.0"><failure message="tangogql/schema/tango.py:14" type="C0121: singleton-comparison">Comparison to True should be just 'expr'
+</failure><failure message="tangogql/schema/tango.py:15" type="C0103: invalid-name">Constant name "mutation" doesn't conform to UPPER_CASE naming style
+</failure><failure message="tangogql/schema/tango.py:17" type="C0103: invalid-name">Class name "mutation" doesn't conform to PascalCase naming style
+</failure><failure message="tangogql/schema/tango.py:19" type="C0103: invalid-name">Constant name "tangoschema" doesn't conform to UPPER_CASE naming style
+</failure></testcase><testcase name="tangogql.schema.types" time="0.0"><failure message="tangogql/schema/types.py:32" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="tangogql/schema/types.py:80" type="C0326: bad-whitespace">Exactly one space required after comma
+    def convert(data_type,value):
+                         ^
+</failure><failure message="tangogql/schema/types.py:84" type="C0326: bad-whitespace">Exactly one space required after comma
+                if value.lower() in ["true","t","1"]:
+                                           ^
+</failure><failure message="tangogql/schema/types.py:84" type="C0326: bad-whitespace">Exactly one space required after comma
+                if value.lower() in ["true","t","1"]:
+                                               ^
+</failure><failure message="tangogql/schema/types.py:86" type="C0326: bad-whitespace">Exactly one space required after comma
+                elif value.lower() in ["false","f","1"]:
+                                              ^
+</failure><failure message="tangogql/schema/types.py:86" type="C0326: bad-whitespace">Exactly one space required after comma
+                elif value.lower() in ["false","f","1"]:
+                                                  ^
+</failure><failure message="tangogql/schema/types.py:91" type="C0301: line-too-long">Line too long (102/100)
+</failure><failure message="tangogql/schema/types.py:91" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevInt","DevShort","DevUShort","DevULong","DevLong","DevLong64","DevULong64"]:
+                               ^
+</failure><failure message="tangogql/schema/types.py:91" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevInt","DevShort","DevUShort","DevULong","DevLong","DevLong64","DevULong64"]:
+                                          ^
+</failure><failure message="tangogql/schema/types.py:91" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevInt","DevShort","DevUShort","DevULong","DevLong","DevLong64","DevULong64"]:
+                                                      ^
+</failure><failure message="tangogql/schema/types.py:91" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevInt","DevShort","DevUShort","DevULong","DevLong","DevLong64","DevULong64"]:
+                                                                 ^
+</failure><failure message="tangogql/schema/types.py:91" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevInt","DevShort","DevUShort","DevULong","DevLong","DevLong64","DevULong64"]:
+                                                                           ^
+</failure><failure message="tangogql/schema/types.py:91" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevInt","DevShort","DevUShort","DevULong","DevLong","DevLong64","DevULong64"]:
+                                                                                       ^
+</failure><failure message="tangogql/schema/types.py:93" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevString","DevStates","ConstDevString"]:
+                                  ^
+</failure><failure message="tangogql/schema/types.py:93" type="C0326: bad-whitespace">Exactly one space required after comma
+            elif t in ["DevString","DevStates","ConstDevString"]:
+                                              ^
+</failure><failure message="tangogql/schema/types.py:98" type="C0304: missing-final-newline">Final newline missing
+</failure><failure message="tangogql/schema/types.py:25" type="R1705: no-else-return">Unnecessary "elif" after "return"
+</failure><failure message="tangogql/schema/types.py:35" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/types.py:76" type="W0703: broad-except">Catching too general exception Exception
+</failure><failure message="tangogql/schema/types.py:63" type="R1705: no-else-return">Unnecessary "elif" after "return"
+</failure><failure message="tangogql/schema/types.py:76" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/types.py:79" type="C0115: missing-class-docstring">Missing class docstring
+</failure><failure message="tangogql/schema/types.py:80" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="tangogql/schema/types.py:80" type="E0213: no-self-argument">Method should have "self" as first argument
+</failure><failure message="tangogql/schema/types.py:81" type="C0103: invalid-name">Variable name "t" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/types.py:97" type="W0703: broad-except">Catching too general exception Exception
+</failure><failure message="tangogql/schema/types.py:83" type="R1720: no-else-raise">Unnecessary "elif" after "raise"
+</failure><failure message="tangogql/schema/types.py:84" type="R1705: no-else-return">Unnecessary "elif" after "return"
+</failure><failure message="tangogql/schema/types.py:97" type="C0103: invalid-name">Variable name "e" doesn't conform to snake_case naming style
+</failure><failure message="tangogql/schema/types.py:80" type="R0911: too-many-return-statements">Too many return statements (7/6)
+</failure><failure message="tangogql/schema/types.py:79" type="R0903: too-few-public-methods">Too few public methods (1/2)
+</failure><failure message="tangogql/schema/types.py:4" type="W0611: unused-import">Unused String imported from graphene
+</failure></testcase><testcase name="ska.setup" time="0.0"><failure message="ska/setup.py:1" type="C0114: missing-module-docstring">Missing module docstring
+</failure><failure message="ska/setup.py:7" type="C0103: invalid-name">Constant name "readme" doesn't conform to UPPER_CASE naming style
+</failure></testcase><testcase name="ska.perf-scripting" time="0.0"><failure message="ska/perf-scripting/__init__.py:1" type="C0103: invalid-name">Module name "perf-scripting" doesn't conform to snake_case naming style
+</failure></testcase><testcase name="ska.perf-scripting.test_api" time="0.0"><failure message="ska/perf-scripting/test_api.py:10" type="C0301: line-too-long">Line too long (113/100)
+</failure><failure message="ska/perf-scripting/test_api.py:15" type="C0301: line-too-long">Line too long (108/100)
+</failure><failure message="ska/perf-scripting/test_api.py:17" type="C0303: trailing-whitespace">Trailing whitespace
+</failure><failure message="ska/perf-scripting/test_api.py:20" type="C0301: line-too-long">Line too long (102/100)
+</failure><failure message="ska/perf-scripting/test_api.py:25" type="C0326: bad-whitespace">No space allowed before bracket
+def send_request (json):
+                 ^
+</failure><failure message="ska/perf-scripting/test_api.py:1" type="C0114: missing-module-docstring">Missing module docstring
+</failure><failure message="ska/perf-scripting/test_api.py:25" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="ska/perf-scripting/test_api.py:30" type="C0116: missing-function-docstring">Missing function or method docstring
+</failure><failure message="ska/perf-scripting/test_api.py:31" type="W0612: unused-variable">Unused variable 'request'
+</failure><failure message="ska/perf-scripting/test_api.py:1" type="R0801: duplicate-code">Similar lines in 2 files
+==tangogql.aioserver:99
+==tangogql.schema.base:19
+    path = default_path
+    value = os.getenv(env_key, None)
+    if value:
+        path = value
+    if os.path.exists(path):
+        with open(path, 'rt') as f:
+            config = yaml.safe_load(f.read())
+        logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level=default_level)
+</failure><failure message="ska/perf-scripting/test_api.py:1" type="R0801: duplicate-code">Similar lines in 2 files
+==tangogql.schema.device:157
+==tangogql.schema.query:230
+                                    tag=cmd_info.cmd_tag,
+                                    displevel=cmd_info.disp_level,
+                                    intype=cmd_info.in_type,
+                                    intypedesc=cmd_info.in_type_desc,
+                                    outtype=cmd_info.out_type,
+                                    outtypedesc=cmd_info.out_type_desc,
+</failure></testcase></testsuite>
+</testsuites>
