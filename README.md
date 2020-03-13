@@ -18,7 +18,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 #### Docker comands
 
 ```
-docker exec -it webjive sh
+docker exec -it webjive /bin/bash
 ```
 
 ### Stop all containers
