@@ -1,5 +1,7 @@
 #!/bin/bash 
-cd ~/web-maxiv-tangogql && docker-compose build && docker-compose up -d
+cd ~/web-maxiv-tangogql && sed -i 's/"secret":""/"secret":"s3cr3t"/g' config.json
+cd ~/web-maxiv-tangogql && make -f ska/Makefile -C . build
+cd ~/web-maxiv-tangogql && sed -i 's/"secret":"s3cr3t"/"secret":""/g' config.json
 cd ~/ska-engineering-ui-compose-utils && make ds-config
 cd ~/ska-engineering-ui-compose-utils && make start webjivetestdevice
 cd ~/ska-engineering-ui-compose-utils && make start tangotest
