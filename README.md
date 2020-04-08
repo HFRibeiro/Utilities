@@ -122,3 +122,9 @@ VBoxManage modifyhd "C:\Users\code\VirtualBox VMs\k8s_t\k8s-disk001.vdi" --resiz
 ```
 kubectl get svc -n kube-system
 ```
+
+### export/import dashboards
+```
+docker exec -i mongodb mongoexport --db dashboards --collection dashboards > data/mongo/dashboards.json
+docker exec -i mongodb mongoimport --db dashboards --collection dashboards < data/mongo/dashboards.json
+```
