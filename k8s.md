@@ -31,3 +31,8 @@ kubectl get svc -n kube-system
 ```
 watch kubectl get all,pv,pvc,ingress -n integration
 ```
+
+#### KIBANA
+```
+kubernetes.container_name : "tangogql"
+```
