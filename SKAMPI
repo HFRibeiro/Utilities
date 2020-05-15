@@ -1,0 +1,70 @@
+How to setup SKAMPI on a new linux VM:
+
+This tutorial assumes that you have a Virtual Machine created, with ansible and git installed, this was tested using Ubuntu 18.04
+
+The minimum hardware advised:
+	100 GB of disk
+	8 GB of RAM
+	4 Cores (If you want to do this today :D ) 
+
+Clone the ansible playbook repo from SKA 
+git clone https://gitlab.com/ska-telescope/ansible-playbooks.git
+Enter ansible-playbooks folder and execute:
+ansible-playbook -i hosts deploy_skampi.yml
+Follow the installation with:
+watch kubectl get all,pv,pvc,ingress -n integration
+After all is complete and you see something like this:
+
+Find your machine local IP, in my case: 192.168.1.81
+Execute sudo gedit /etc/hosts and add:
+192.168.1.81  integration.engageska-portugal.pt 
+hosts should look like this:
+
+That’s it, if everything went ok you should now be able to see webjive in http://integration.engageska-portugal.pt/ that is pointing to your local machine
+
+Troubleshooting:
+
+Connection problem: 
+The connection to the server 192.168.1.81:8443 was refused - did you specify the right host or port?
+
+Run: minikube start
+Watch the process at: watch kubectl get all,pv,pvc,ingress -n integration
+(It can take a while)
+
+
+Check system connections:
+kubectl get svc -n kube-system
+
+Example output:
+NAME            TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                      AGE
+calico-etcd     ClusterIP      10.96.232.136    <none>         6666/TCP                     51m
+kube-dns        ClusterIP      10.96.0.10       <none>         53/UDP,53/TCP,9153/TCP       53m
+tiller-deploy   ClusterIP      10.107.113.231   <none>         44134/TCP                    51m
+traefik0        LoadBalancer   10.102.127.90    192.168.1.81   443:30075/TCP,80:32707/TCP   51m
+
+
+Usefull commands:
+
+$ make delete_all KUBE_NAMESPACE=integration
+
+$ make deploy_all KUBE_NAMESPACE=integration 
+
+**INGRESS_HOST=`hostname`
+
+$ kubectl describe pods -n integration databaseds-tango-base-test-0
+
+
+K8s base image:
+https://drive.google.com/drive/folders/1tB2clh8zIyB7kr9-IGiC8PVaCiJd0URs
+
+
+
+## both commands necessary for redeploy skampi (WIP will update the coment in the close future)
+make delete_traefik EXTERNAL_IP=192.168.1.71 && make traefik EXTERNAL_IP=192.168.1.91
+
+sudo -E minikube start --vm-driver=none --extra-config=kubelet.resolv-conf=/var/run/systemd/resolve/resolv.conf
+
+GraphIQL: 
+http://10.100.30.243:5004/graphiql
+
+docker container ls
