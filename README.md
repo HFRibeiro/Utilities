@@ -128,3 +128,11 @@ kubectl get svc -n kube-system
 docker exec -i mongodb mongoexport --db dashboards --collection dashboards > data/mongo/dashboards.json
 docker exec -i mongodb mongoimport --db dashboards --collection dashboards < data/mongo/dashboards.json
 ```
+
+
+### teensy 4.0
+```
+sudo apt-get install avr-libc gcc-avr
+```
+
+
