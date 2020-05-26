@@ -135,4 +135,10 @@ docker exec -i mongodb mongoimport --db dashboards --collection dashboards < dat
 sudo apt-get install avr-libc gcc-avr
 ```
 
+### HID NAME
+
+```
+Computer\HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\Joystick\OEM
+```
+
 
