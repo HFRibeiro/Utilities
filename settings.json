@@ -1,0 +1,11 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDelete": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "One Monokai",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+        // any other languages you'd like
+    },
+    "emmet.showExpandedAbbreviation": "always"
+}
