@@ -1,0 +1,7 @@
+mutation{
+  executeCommand(device: "mid_csp/elt/master", command: "On", argin: ["1"]) {
+    ok
+    message
+    output
+	}
+}
