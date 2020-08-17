@@ -2,8 +2,10 @@
 cd ~/web-maxiv-tangogql && sed -i 's/"secret":""/"secret":"s3cr3t"/g' config.json
 cd ~/web-maxiv-tangogql && make -f ska/Makefile -C . build
 cd ~/web-maxiv-tangogql && sed -i 's/"secret":"s3cr3t"/"secret":""/g' config.json
+cd ~/tango-example && make build
 cd ~/ska-engineering-ui-compose-utils && make ds-config
 cd ~/ska-engineering-ui-compose-utils && make start webjivetestdevice
 cd ~/ska-engineering-ui-compose-utils && make start tangotest
+cd ~/ska-engineering-ui-compose-utils && make start tango-example
 cd ~/ska-engineering-ui-compose-utils && make mvp
 cd ~/ska-engineering-ui-compose-utils && docker attach tangogql
