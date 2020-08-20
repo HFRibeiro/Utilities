@@ -141,4 +141,10 @@ sudo apt-get install avr-libc gcc-avr
 Computer\HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\Joystick\OEM
 ```
 
+### Find files 
+
+```
+find /path/to/file/ -iname filename
+```
+
 
