@@ -1,0 +1,4 @@
+#!/bin/bash 
+cd ~/webjive && docker build . -t nexus.engageska-portugal.pt/ska-telescope/webjive:webjive
+kubectl delete pod webjive-webjive-test-0 -n integration
+watch kubectl get pod/webjive-webjive-test-0 -n integration
