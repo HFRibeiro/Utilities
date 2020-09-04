@@ -147,4 +147,8 @@ Computer\HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\Priv
 find /path/to/file/ -iname filename
 ```
 
+### Permissions
 
+```
+sudo chown -R $USER /usr/src/skampi
+```
