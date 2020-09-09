@@ -157,5 +157,10 @@ sudo chown -R $USER /usr/src/skampi
 
 ```
 kubectl taint nodes --all node-role.kubernetes.io/master-
+
+sudo swapoff -a
+strace -eopenat kubectl version
 ```
+
+
 
