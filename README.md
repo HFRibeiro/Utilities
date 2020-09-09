@@ -152,3 +152,10 @@ find /path/to/file/ -iname filename
 ```
 sudo chown -R $USER /usr/src/skampi
 ```
+
+### Taint
+
+```
+kubectl taint nodes --all node-role.kubernetes.io/master-
+```
+
