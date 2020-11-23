@@ -3,7 +3,7 @@ Changes check
 Tutoriais
 ```bash
 grep -rnw '/home/code/esp/esp-idf' -e 'Brownout'
-grep -rnw --exclude-dir=node_modules '.' -e 'executeCommand'
+grep -rnw --exclude-dir=node_modules '.' -e 'executeCommand.*'
 ```
 
 ```bash
