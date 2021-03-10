@@ -1,0 +1,19 @@
+query{
+  classes(pattern:"*")
+  {
+    name
+    instance
+    server
+    devices {
+      name
+      state
+      connected
+      alias
+      deviceClass
+      pid
+      startedDate
+      stoppedDate
+      exported
+    }
+  }
+}
