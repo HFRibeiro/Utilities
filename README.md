@@ -162,5 +162,11 @@ sudo swapoff -a
 strace -eopenat kubectl version
 ```
 
+### auto hotspot
+
+nmcli con show
+
+nmcli con mod Hotspot connection.autoconnect yes
+
 
 
