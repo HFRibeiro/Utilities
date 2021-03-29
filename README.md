@@ -168,5 +168,6 @@ nmcli con show
 
 nmcli con mod Hotspot connection.autoconnect yes
 
-
+### GO PRO TO BIN 
+ffmpeg -y -i GOPR1960.MP4 -codec copy -map 0:m:handler_name:"	GoPro MET" -f rawvideo GOPR1960.bin
 
