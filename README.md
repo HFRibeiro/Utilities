@@ -171,3 +171,14 @@ nmcli con mod Hotspot connection.autoconnect yes
 ### GO PRO TO BIN 
 ffmpeg -y -i GOPR1960.MP4 -codec copy -map 0:m:handler_name:"	GoPro MET" -f rawvideo GOPR1960.bin
 
+### Python 
+```
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 2
+
+sudo update-alternatives  --set python /usr/bin/python3.8
+
+
+sudo update-alternatives --config python
+```
+
