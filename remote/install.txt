@@ -1,0 +1,3 @@
+sudo addgroup chrome-remote-desktop
+sudo usermod -a -G chrome-remote-desktop $USER
+sudo reboot
