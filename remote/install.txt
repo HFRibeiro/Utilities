@@ -1,3 +1,8 @@
 sudo addgroup chrome-remote-desktop
 sudo usermod -a -G chrome-remote-desktop $USER
+mkdir ~/.config/chrome-remote-desktop
+sudo cp /opt/google/chrome-remote-desktop/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop.orig
+/opt/google/chrome-remote-desktop/chrome-remote-desktop --stop
+sudo mousepad /opt/google/chrome-remote-desktop/chrome-remote-desktop
+/opt/google/chrome-remote-desktop/chrome-remote-desktop --start
 sudo reboot
