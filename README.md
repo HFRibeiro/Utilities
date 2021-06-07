@@ -182,3 +182,8 @@ sudo update-alternatives  --set python /usr/bin/python3.8
 sudo update-alternatives --config python
 ```
 
+### Docker login
+```
+cat ~/my_password.txt | docker login --username hfribeiro --password-stdin
+```
+
