@@ -187,3 +187,7 @@ sudo update-alternatives --config python
 cat ~/my_password.txt | docker login --username hfribeiro --password-stdin
 ```
 
+### Docker remove none images
+```
+docker rmi $(docker images | grep "<none>" | awk "{print $3}")
+```
