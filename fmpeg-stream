@@ -1,6 +1,7 @@
-sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+
 sudo apt-get update                           
 sudo apt-get install ffmpeg nginx 
+sudo chmod 777 -R /var/www/html
 
 sudo ffmpeg -v info -i rtsp://freja.hiof.no:1935/rtplive/definst/hessdalen03.stream -c:v copy -c:a copy -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 -single_file 1 /var/www/html/video.m3u8
 
