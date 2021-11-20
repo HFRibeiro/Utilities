@@ -191,3 +191,8 @@ cat ~/my_password.txt | docker login --username hfribeiro --password-stdin
 ```
 docker rmi $(docker images | grep "<none>" | awk "{print $3}")
 ```
+
+###Chrome remote
+```
+mkdir ~/.config/chrome-remote-desktop
+```
