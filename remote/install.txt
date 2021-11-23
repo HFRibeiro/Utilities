@@ -5,6 +5,7 @@ sudo usermod -a -G chrome-remote-desktop $USER
 mkdir ~/.config/chrome-remote-desktop
 sudo cp /opt/google/chrome-remote-desktop/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop.orig
 /opt/google/chrome-remote-desktop/chrome-remote-desktop --stop
-sudo mousepad /opt/google/chrome-remote-desktop/chrome-remote-desktop
+sudo cp chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop
 /opt/google/chrome-remote-desktop/chrome-remote-desktop --start
+DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AX4XfWiy7gjJeVOFI2l1X6-PPc8MH5BJhKtCCji2NIAEXRp0S5M71Zl503vWl9tpYaLSHQ" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)
 sudo reboot
