@@ -1,3 +1,5 @@
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo apt install ./https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo addgroup chrome-remote-desktop
 sudo usermod -a -G chrome-remote-desktop $USER
 mkdir ~/.config/chrome-remote-desktop
