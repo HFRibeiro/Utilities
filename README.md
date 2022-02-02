@@ -196,3 +196,9 @@ docker rmi $(docker images | grep "<none>" | awk "{print $3}")
 ```
 mkdir ~/.config/chrome-remote-desktop
 ```
+
+
+###Yarn
+```
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+```
