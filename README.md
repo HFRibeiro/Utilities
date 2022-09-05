@@ -207,3 +207,8 @@ sudo apt-get install -y nodejs
 ```
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
+
+###Disk inspector ubuntu
+```
+sudo baobab
+```
