@@ -1,6 +1,13 @@
 # Tutoriais
 Changes check
 Tutoriais
+
+## ska-tango-taranta-pipeline
+```
+docker run -it -v /home/code/ska-tango-taranta-pipeline/taranta:/app node:alpine sh
+apk add --update bash coreutils git jq make docker-compose tar
+```
+
 ```bash
 grep -rnw '/home/code/esp/esp-idf' -e 'Brownout'
 grep -rnw --exclude-dir=node_modules '.' -e 'executeCommand.*'
