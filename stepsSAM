@@ -1,5 +1,4 @@
 git clone git@gitlab.com:atlar/sam/sam-mvp.git
-docker login registry.gitlab.com -u HFRibeiro -p glpat-tqSse1RsEPK2HaiK6FJ2
 make recreate
 http://localhost:9090/#/dashboard/overview -> atlar atlar
 mongodb://atlar:atlar@localhost:27017/?authMechanism=DEFAULT
