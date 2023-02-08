@@ -1,0 +1,44 @@
+git clone git@gitlab.com:atlar/sam/sam-mvp.git
+docker login registry.gitlab.com -u HFRibeiro -p glpat-tqSse1RsEPK2HaiK6FJ2
+make recreate
+http://localhost:9090/#/dashboard/overview -> atlar atlar
+mongodb://atlar:atlar@localhost:27017/?authMechanism=DEFAULT
+
+
+curl -sSL https://install.python-poetry.org | python3 -
+
+git clone git@gitlab.com:atlar/sam/sam-core.git
+git checkout SAM-2-document-and-clean-sam-components
+
+poetry shell
+poetry install
+
+SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0= SAM_LOG_LEVEL=DEBUG python -u src/examples/device.py -c src/examples/config1.yml
+
+SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0= SAM_LOG_LEVEL=DEBUG python -u src/examples/device.py -c src/examples/config2.yml
+
+SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0= SAM_LOG_LEVEL=DEBUG python -u src/examples/device.py -c src/examples/config3.yml
+
+
+cd sam_mvp
+git pull
+docker image rm registry.gitlab.com/atlar/sam/sam-rest-api/sam-rest-api:0.0.1
+DEPLOYMENT_PROFILE=rest-api-dev make recreate
+
+cd sam-rest-api
+git checkout SAM-2-document-and-clean-sam-components
+poetry shell
+poetry install
+
+export SAM_DEVICE_DATABASE_CREDENTIALS=eyJ1c2VybmFtZSI6InNhbSIsInBhc3N3b3JkIjoic2FtIn0=
+export SAM_DEVICE_STATE_DATABASE_CREDENTIALS=eyJ1c2VybmFtZSI6InNhbSIsInBhc3N3b3JkIjoic2FtIn0=
+export SAM_DEVICE_ATTRIBUTES_DATABASE_CREDENTIALS=eyJ1c2VybmFtZSI6InNhbSIsInBhc3N3b3JkIjoic2FtIn0=
+export SAM_DASHBOARDS_DATABASE_CREDENTIALS=eyJ1c2VybmFtZSI6InNhbSIsInBhc3N3b3JkIjoic2FtIn0=
+python3 src/main.py
+
+
+SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0= SAM_LOG_LEVEL=DEBUG python -u src/examples/device.py -c src/examples/configs/example_device.yml
+
+SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0= SAM_LOG_LEVEL=DEBUG python -u src/examples/device.py -c src/examples/configs/signals_device.yml
+
+SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0= SAM_LOG_LEVEL=DEBUG python -u src/examples/device.py -c src/examples/configs/system_device.yml
