@@ -1,0 +1,12 @@
+[[runners]]
+  url = "https://gitlab.com/"
+  token = "<TOKEN>"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "docker"
+    privileged = true
+    disable_cache = false
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+  [runners.cache]
+    Insecure = false
