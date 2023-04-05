@@ -90,7 +90,7 @@ DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority TANGO_HOST=databaseds:10000 
 
 ### npm install
 ```
-curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 ```
 
 #### Here is a way to install packages globally for a given user.
