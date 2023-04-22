@@ -1,0 +1,7 @@
+hdiutil convert -format UDRW -o ubuntu-23.04-desktop-amd64.img ubuntu-23.04-desktop-amd64.iso
+
+
+diskutil list
+diskutil unmountDisk /dev/disk4
+
+sudo dd if=ubuntu-23.04-desktop-amd64.img of=/dev/rdisk4 bs=1m
