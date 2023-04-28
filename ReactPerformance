@@ -1,0 +1,163 @@
+import React from 'react';
+import { IRootState } from "../../../shared/state/reducers/rootReducer";
+import { useSelector } from "react-redux";
+import {
+  getAttributeLastQualityFromState,
+  getAttributeLastTimeStampFromState,
+  getAttributeLastValueFromState
+} from '../../../shared/utils/getLastValueHelper';
+import { JSONTree, parseJSONObject } from '../../../shared/utils/JSONTree';
+
+interface Props {
+  attributeName: string;
+  deviceName: string;
+  mode: string;
+  showAttrQuality: boolean;
+  precision: number;
+  scientificNotation: boolean;
+  showEnumLabels: boolean;
+  enumlabels: string[];
+  unit: string | undefined;
+  minAlarm?: number | undefined;
+  maxAlarm?: number | undefined;
+}
+
+const renderQuality = (mode: string, quality: string) => {
+  if (mode !== "run") return null;
+
+  const sub = {
+    ATTR_VALID: "valid",
+    ATTR_INVALID: "invalid",
+    ATTR_CHANGING: "changing",
+    ATTR_ALARM: "alarm",
+    ATTR_WARNING: "warning",
+  }[quality] || "invalid";
+
+  return (
+    <span
+      style={{ marginLeft: '5px' }}
+      className={`QualityIndicator ${sub}`}
+      title={quality}>
+      {sub.toUpperCase()}
+    </span>
+  );
+}
+
+function customEquality(prev: any, curr: any) {
+  if (prev === curr) {
+    return true;
+  }
+  if (typeof prev !== 'object' || typeof curr !== 'object') {
+    return false;
+  }
+  if (Object.keys(prev).length !== Object.keys(curr).length) {
+    return false;
+  }
+  for (const key in prev) {
+    if (!curr.hasOwnProperty(key) || prev[key] !== curr[key]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+let times = [0];
+
+const AttributeValues: React.FC<Props> = ({
+  attributeName,
+  deviceName,
+  mode,
+  showAttrQuality,
+  precision,
+  scientificNotation,
+  showEnumLabels,
+  enumlabels,
+  unit,
+  minAlarm,
+  maxAlarm
+}) => {
+
+  const unitSuffix = unit ? ` ${unit} ` : "";
+
+  const start = performance.now();
+
+  /*
+  const result = useSelector((state: IRootState) => {
+    const result = {
+      value: getAttributeLastValueFromState(state.messages, deviceName, attributeName),
+      timestamp: getAttributeLastTimeStampFromState(state.messages, deviceName, attributeName)?.toString(),
+      quality: getAttributeLastQualityFromState(state.messages, deviceName, attributeName)?.toString()
+    }
+    return JSON.stringify(result);
+  });
+
+  const {value, timestamp, quality} = JSON.parse(result);
+  */
+/*
+  const { value, timestamp, quality } = useSelector(
+    (state: IRootState) => {
+      return {
+        value: getAttributeLastValueFromState(state.messages, deviceName, attributeName),
+        timestamp: getAttributeLastTimeStampFromState(state.messages, deviceName, attributeName)?.toString(),
+        quality: getAttributeLastQualityFromState(state.messages, deviceName, attributeName)?.toString()
+      };
+    },
+    customEquality
+  );
+  */
+
+  
+  const value = useSelector((state: IRootState) => {
+    return getAttributeLastValueFromState(state.messages, deviceName, attributeName);
+  });
+
+  const timestamp = useSelector((state: IRootState) => {
+    return getAttributeLastTimeStampFromState(state.messages, deviceName, attributeName)?.toString();
+  });
+
+  const quality = useSelector((state: IRootState) => {
+    return getAttributeLastQualityFromState(state.messages, deviceName, attributeName)?.toString();
+  });
+  
+
+  const end = performance.now();
+  times.push(end * 1000 - start * 1000);
+  const sum = times.filter(val => val !== 0).reduce((acc, val) => acc + val, 0);
+  const mean = sum / (times.length - times.filter(val => val === 0).length);
+  console.log("mean: ", mean, " microseconds, samples: ", times.length);
+
+  let backgroundColor = "";
+  if (maxAlarm && minAlarm && value !== undefined) {
+    if (value >= maxAlarm || value <= minAlarm)
+      backgroundColor = "#ffaaaa";
+  }
+
+  let valueDisplay: string | number | JSX.Element | null = '...';
+
+  if (value !== undefined) {
+    const parsedValue = parseJSONObject(value);
+    if (parsedValue !== null) {
+      valueDisplay = (
+        <div className="json-tree" style={{ marginTop: '22px' }}>
+          <JSONTree data={parsedValue} />
+        </div>
+      );
+    } else {
+      if (typeof (value) === 'number') {
+        if (showEnumLabels) valueDisplay = enumlabels?.[value] || value;
+        else if (scientificNotation) valueDisplay = value.toExponential(precision);
+        else valueDisplay = Number.isInteger(value) ? value : Number(value).toFixed(precision);
+      }
+      else valueDisplay = String(value);
+    }
+  }
+
+  return (
+    <div title={new Date(timestamp * 1000).toLocaleString()} style={{ backgroundColor: backgroundColor }}>
+      {valueDisplay ? valueDisplay : '...'}
+      {showAttrQuality ? renderQuality(mode, quality) : null} {unitSuffix}
+    </div>
+  );
+};
+
+export default AttributeValues;
