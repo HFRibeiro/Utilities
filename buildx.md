@@ -20,5 +20,5 @@ EOF
 ```
 
 ```
-docker buildx build --platform linux/amd64,linux/arm64,linux/armv7,linux/armv8 -t hfribeiro/ubuntu-simple:latest --push .
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm64/v7,linux/arm64/v8 -t hfribeiro/ubuntu-simple:latest --push .
 ```
