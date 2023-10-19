@@ -220,6 +220,20 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 sudo baobab
 ```
 
+###VsCode Minikube docker images
+```
+minikube docker-env
+Edit: /home/code/.config/Code/User/settings.json
+```
+```
+"docker.environment": {
+"DOCKER_HOST": "tcp://192.168.49.2:2376",
+"DOCKER_CERT_PATH": "/home/code/.minikube/certs",
+"DOCKER_TLS_VERIFY": "1"
+}
+```
+
+
 ###Delete all local branches except main
 ```
 git branch | grep -v "main" | xargs git branch -D
