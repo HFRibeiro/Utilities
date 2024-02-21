@@ -238,3 +238,8 @@ Edit: /home/code/.config/Code/User/settings.json
 ```
 git branch | grep -v "main" | xargs git branch -D
 ```
+
+###Docker node taranta
+```
+docker run -v $(pwd):/taranta -it node:18-alpine sh
+```
