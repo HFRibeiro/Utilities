@@ -1,0 +1,18 @@
+```
+packaging
+./autogen.sh
+./configure --prefix=$HOME/packaging
+make -j $(nproc)
+make install
+```
+
+Binary will be at $HOME/packaging/bin Edit->Create Server
+
+Go and register the device on JIVE:
+Example:
+Device: example-device/example1/0
+Server: ExampleDevice/test
+
+```
+~/packaging/bin$ ./ExampleDevice test
+```
