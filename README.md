@@ -248,4 +248,8 @@ docker run -v $(pwd):/taranta -it node:18-alpine sh
 ```
 xhost +local:docker
 docker run -v$(pwd):/root/ds -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY registry.gitlab.com/tango-controls/pogo:9.8.3
+
+sudo chown -R $(id -u):$(id -g) .
+chmod -R u+rw .
+
 ```
