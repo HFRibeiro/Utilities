@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Navigate to the sam-core directory
+cd ~/sam-core
+
+# Install dependencies
+poetry install
+
+# Set the environment variables
+export SAM_MQTT_CREDENTIALS=eyJ1c2VybmFtZSI6ImRldmljZSIsInBhc3N3b3JkIjoic2FtIn0=
+export SAM_LOG_LEVEL=DEBUG
+
+# Run the specified command within the poetry environment
+poetry run python -u src/examples/device.py -c src/examples/configs/example_device.yml
+
+#system_device.yml
+#signals_device.yml
