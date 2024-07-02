@@ -2,7 +2,7 @@
 
 # WiFi credentials
 SSID="ByteMe"
-PSK="11dbmtpI"
+PSK="xxx"
 INTERFACE="wlan0"
 STATIC_IP="192.168.0.8/24"
 GATEWAY="192.168.0.1"
