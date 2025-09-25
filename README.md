@@ -2,6 +2,13 @@
 Changes check
 Tutoriais
 
+## docker context
+
+```
+docker context create minikube \
+  --docker "host=tcp://192.168.49.2:2376,ca=/home/code/.minikube/certs/ca.pem,cert=/home/code/.minikube/certs/cert.pem,key=/home/code/.minikube/certs/key.pem"
+```
+
 ## ska-tango-taranta-pipeline
 ```
 docker run -it -v /home/code/ska-tango-taranta-pipeline/taranta:/app node:alpine sh
