@@ -208,6 +208,11 @@ docker rmi $(docker images | grep "<none>" | awk "{print $3}")
 docker system prune -a --volumes
 ```
 
+### keep only latest
+```
+docker images --format '{{.Repository}}' | sort -u | xargs -I {} sh -c 'docker images {} --format "{{.ID}}" | tail -n +2 | xargs -r docker rmi'
+```
+
 ###Chrome remote
 ```
 mkdir ~/.config/chrome-remote-desktop
