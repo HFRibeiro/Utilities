@@ -1,0 +1,20 @@
+name: local-qwen-agent
+version: "1.0.0"
+schema: v1
+
+models:
+  - name: QwenLocal30B
+    title: "Qwen 30B Local"
+    provider: openai
+    model: qwen/qwen3-30b-a3b-2507:2
+    apiBase: http://192.168.1.197:1234/v1
+    defaultCompletionOptions:
+      temperature: 0.7
+      maxTokens: 2048
+    roles:
+      - chat
+      - edit
+      - autocomplete
+
+
+  #at /home/code/.continue/config.yaml
