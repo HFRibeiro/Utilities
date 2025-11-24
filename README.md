@@ -97,6 +97,10 @@ DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority TANGO_HOST=databaseds:10000 
 
 ### npm install
 ```
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -   # for the current (cutting-edge) release.
+
+or fixed 18
+
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 ```
 
